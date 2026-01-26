@@ -1,13 +1,16 @@
+<script>
+let index = 0;
 const slides = document.getElementById("slides");
-let scrollAmount = 0;
+const total = slides.children.length;
 
-function moverSlider() {
-    scrollAmount += 1;
-    slides.scrollLeft = scrollAmount;
-
-    if (scrollAmount >= slides.scrollWidth - slides.clientWidth) {
-        scrollAmount = 0;
+function moverCarrusel() {
+    index++;
+    if (index >= total) {
+        index = 0;
     }
+
+    slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
-setInterval(moverSlider, 20);
+setInterval(moverCarrusel, 3000); // cambia cada 3 segundos
+</script>
