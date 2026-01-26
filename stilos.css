@@ -21,18 +21,9 @@ body {
 .carrusel {
     font-size: 10px;
     padding: 40px 0;
-    cursor: center;
-}
-.carrusel1 h2{
-    margin-bottom: 20px;
 }
 .slider{
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 15px;
-
+    height:300 px;
 }
 .slides{
     display: flex;
@@ -40,9 +31,11 @@ body {
     transition: transform 0.6s ease-in-out;
 }
 .slides img {
-    height: 70px;
+    height: 3100px;
     width: auto;
     object-fit: contain;
+    flter: bluir(3px) brightness(1.1);
+    trnasform: scale (1.05)
 }
 
 .IMAGENES img {
