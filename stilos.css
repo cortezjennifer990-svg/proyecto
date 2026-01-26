@@ -27,7 +27,7 @@ body {
 .slider {
   width: min(95%, 1100px);    /* ancho máximo y centrado */
   margin: 0 auto;
-  height: 360px;              /* 🔁 AUMENTA este valor para verlas más grandes (p.ej. 420px) */
+  height: 70px;              /* 🔁 AUMENTA este valor para verlas más grandes (p.ej. 420px) */
   overflow: hidden;
   border-radius: 18px;
   position: relative;
@@ -49,10 +49,6 @@ body {
   object-fit: cover;           /* usa contain si no quieres recorte */
 }
 
-/* (Opcional) Barrido cuando se mueve */
-.slides.moviendo {
-  filter: blur(6px);
-}
 
 
 .IMAGENES img {
