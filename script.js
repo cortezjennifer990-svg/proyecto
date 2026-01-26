@@ -7,7 +7,10 @@ if (slides) {
     function moverCarrusel() {
         index = (index + 1) % total;
         slides.style.transform = `translateX(-${index * 100}%)`;
+        setTimeout(() => {
+            slides.classList.remove("transition");
+        }, 600);
     }
 
-    setInterval(moverCarrusel, 3000); // cambia cada 3 segundos
+    setInterval(moverCarrusel, 3000); 
 }
