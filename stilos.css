@@ -83,13 +83,11 @@ body {
 /* conocenos */
 .conocenos {
    
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;  /* mueve texto a la derecha */
-    
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px; 
 }
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
@@ -105,38 +103,4 @@ body {
     font-size: 30px;
     line-height: 1.6;
     margin-bottom: 30px;
-}
-
-
-
-/* Video lado derecho */
-.video-conocenos {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video-conocenos iframe {
-    width: 520px;
-    height: 300px;
-    border-radius: 18px;
-}
-
-/* Botón */
-.btn-banner {
-    width: 220px;
-    padding: 12px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    background: #2563eb;
-    color: white;
-    cursor: pointer;
-}
-
-.btn-banner:hover {
-    background: #1d4ed8;
 }
