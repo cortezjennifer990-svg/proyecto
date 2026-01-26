@@ -25,7 +25,7 @@ body {
 
 /* Contenedor visible del carrusel */
 .slider {
-  width: min(95%, 1100px);    /* ancho máximo y centrado */
+     /* ancho máximo y centrado */
   margin: 0 auto;
   height: 70px;              /* 🔁 AUMENTA este valor para verlas más grandes (p.ej. 420px) */
   overflow: hidden;
