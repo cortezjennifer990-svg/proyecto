@@ -54,10 +54,6 @@ body {
   filter: blur(6px);
 }
 
-/* Responsive: en pantallas muy pequeñas baja un poco la altura */
-@media (max-width: 480px) {
-  .slider { height: 240px; }
-}
 
 .IMAGENES img {
     height: 70px;
