@@ -19,13 +19,37 @@ body {
     cursor: pointer;
 }
 
-
-
-.slides img {
-   height: 70px;
-    width: auto;
-    object-fit: contain;       
+.carrusel {
+  padding: 40px 0;
 }
+
+/* Contenedor visible del carrusel */
+.slider {
+  width: min(95%, 1100px);    /* ancho máximo y centrado */
+  margin: 0 auto;
+  height: 70px;              /* 🔁 AUMENTA este valor para verlas más grandes (p.ej. 420px) */
+  overflow: hidden;
+  border-radius: 18px;
+  position: relative;
+}
+
+/* Pista de deslizamiento */
+.slides {
+  display: flex;
+  /* No necesitas fijar width en % si usas flex-basis 100% en hijos */
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+/* Cada imagen ocupa el 100% del ancho visible */
+.slides img {
+  flex: 0 0 100%;             /* <-- hace que salga UNA por vez */
+  width: 100%;
+  height: 70px;
+  object-fit: cover;           /* usa contain si no quieres recorte */
+}
+
+
 
 .IMAGENES img {
     height: 70px;
@@ -96,7 +120,7 @@ body {
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
