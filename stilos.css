@@ -18,11 +18,6 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
-.MARCAS {
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 .carrusel {
   padding: 40px 0;
@@ -88,6 +83,17 @@ body {
 .banner {
     height: 700px; 
     background-image: url("IMAGENES/BIENVENIDOS.png"); /* cambia al nombre real */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;  /* mueve texto a la derecha */
+    color: rgb(255, 255, 255);
+}
+.marcas {
+    height: 700px; 
+    background-image: url("IMAGENES/NUESTRAS MARCAS.png"); /* cambia al nombre real */
     background-size: cover;
     background-position: center;
     display: flex;
