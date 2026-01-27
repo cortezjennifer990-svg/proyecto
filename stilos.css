@@ -18,6 +18,11 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+.MARCAS {
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .carrusel {
   padding: 40px 0;
