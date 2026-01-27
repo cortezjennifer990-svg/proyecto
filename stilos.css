@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 500;
 }
-
+/* Encabezaso*/
 .header {
     display: flex;
     align-items: center;
@@ -18,7 +18,88 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+.IMAGENES img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
 
+/*MENU*/
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1e40af;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 50px;
+}
+.menu a:hover {
+    background: #ffffff;
+}
+
+.menu a.activo {
+    background: #d0e2f8;
+}
+
+.menu a.activo:hover {
+    background: #93c5fd;
+}
+/*BIENVENIDOS*/
+.banner {
+    height: 700px; 
+    background-image: url("IMAGENES/BIENVENIDOS.png"); /* cambia al nombre real */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;  /* mueve texto a la derecha */
+    color: rgb(255, 255, 255);
+}
+/* Roboto Black */
+.titulo-principal {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+/* Roboto SemiBold */
+.texto-banner {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+/*Conocenos*/
+.conocenos {
+   
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px; 
+}
+.titulo-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Roboto SemiBold */
+.texto-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+/*Carrusel*/
 .carrusel {
   padding: 40px 0;
 }
@@ -48,99 +129,15 @@ body {
   height: 70px;
   object-fit: cover;           /* usa contain si no quieres recorte */
 }
-
-
-
-.IMAGENES img {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
-}
-.menu {
-    display: flex;
-    gap: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1e40af;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 50px;
-}
-.menu a:hover {
-    background: #ffffff;
-}
-
-.menu a.activo {
-    background: #d0e2f8;
-}
-
-.menu a.activo:hover {
-    background: #93c5fd;
-}
-
-.banner {
-    height: 700px; 
-    background-image: url("IMAGENES/BIENVENIDOS.png"); /* cambia al nombre real */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;  /* mueve texto a la derecha */
-    color: rgb(255, 255, 255);
-}
+/*COLECCIONES*/
 .marcas {
     height: 700px; 
-    background-image: url("IMAGENES/NUESTRAS MARCAS.png"); /* cambia al nombre real */
+    background-image: url("IMAGENES/NUESTRAS MARCAS.png"); 
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 100px;  /* mueve texto a la derecha */
+    padding-left: 100px; 
     color: rgb(255, 255, 255);
-}
-
-/* Roboto Black */
-.titulo-principal {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-/* Roboto SemiBold */
-.texto-banner {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-/* conocenos */
-.conocenos {
-   
-     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px; 
-}
-.titulo-conocenos {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-/* Roboto SemiBold */
-.texto-conocenos {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 1.6;
-    margin-bottom: 30px;
 }
