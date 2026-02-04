@@ -93,7 +93,7 @@ video iframe{
     align-items: flex-start;   /* ⬅️ CLAVE */
     padding: 80px 100px;
     gap: 50px;
-    background-color: #4069d0;
+    background-color: #ffffff;
 }
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
