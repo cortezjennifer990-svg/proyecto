@@ -93,6 +93,7 @@ video iframe{
     align-items: flex-start;   /* ⬅️ CLAVE */
     padding: 80px 100px;
     gap: 50px;
+    color: #000000;
     background-color: #fff;
 }
 .titulo-conocenos {
