@@ -88,12 +88,12 @@ video iframe{
     width: 50%;
 }
 .conocenos {
-    display: flex;
-    align-items: center;
+  display: flex;
     justify-content: space-between;
+    align-items: flex-start;   /* ⬅️ CLAVE */
     padding: 80px 100px;
-    color: #fff;
     gap: 50px;
+    background-color: #fff;
 }
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
