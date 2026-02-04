@@ -76,6 +76,12 @@ body {
     margin-bottom: 30px;
 }
 /*Conocenos*/
+video{
+    width: 45%;
+}
+video iframe{
+    border-radius:12px
+}
 .conocenos {
    
      display: flex;
