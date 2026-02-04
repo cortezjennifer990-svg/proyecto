@@ -93,7 +93,6 @@ video iframe{
     align-items: flex-start;   /* ⬅️ CLAVE */
     padding: 80px 100px;
     gap: 50px;
-    color: #000000;
     background-color: #fff;
 }
 .titulo-conocenos {
@@ -109,6 +108,7 @@ video iframe{
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 30px;
+    color: #1f2937;
 }
 /*Carrusel*/
 .carrusel {
