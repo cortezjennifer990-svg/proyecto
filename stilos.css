@@ -76,13 +76,14 @@ body {
     margin-bottom: 30px;
 }
 /*Conocenos*/
-.video{
-    width: 150%;
+.video {
+    width: 55%;        /* hace el video más grande */
 }
-.video iframe{
+
+.video iframe {
     width: 100%;
-    height: 580px;
-    border-radius: 15px;
+    height: 520px;     /* alto del video */
+    border-radius: 18px;
 }
 .conocenos-texto{
     width: 50%;
