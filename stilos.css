@@ -117,25 +117,33 @@ body {
     border: none;
 }
 
-/* RESPONSIVE PARA CELULAR */
+/* =========================
+   RESPONSIVE PARA CELULAR
+   ========================= */
 @media (max-width: 900px) {
+
     .conocenos {
-        flex-direction: column;
-        padding: 60px 30px;
-        text-align: center;
+        flex-direction: column;   /* texto arriba, video abajo */
+        padding: 50px 25px;
+        text-align: left;
+        gap: 30px;
     }
 
-    .conocenos-texto,
+    .conocenos-texto {
+        width: 100%;              /* ocupa todo el ancho */
+    }
+
     .video {
-        width: 100%;
+        width: 100%;              /* video ancho completo */
     }
 
     .titulo-conocenos {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .texto-conocenos {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.7;
     }
 }
 
