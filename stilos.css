@@ -76,40 +76,70 @@ body {
     margin-bottom: 30px;
 }
 /*Conocenos*/
-.video {
-    width: 55%;        /* hace el video más grande */
-}
-
-.video iframe {
-    width: 100%;
-    height: 520px;     /* alto del video */
-    border-radius: 18px;
-}
-.conocenos-texto{
-    width: 50%;
-}
+/* CONTENEDOR PRINCIPAL */
 .conocenos {
-  display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;   /* ⬅️ CLAVE */
+    align-items: center;
     padding: 80px 100px;
-    gap: 50px;
+    gap: 60px;
     background-color: #ffffff;
 }
+
+/* TEXTO */
+.conocenos-texto {
+    width: 40%;
+}
+
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 48px;
     margin-bottom: 20px;
 }
-/* Roboto SemiBold */
+
 .texto-conocenos {
-   font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
+
+/* VIDEO */
+.video {
+    width: 55%;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    border: none;
+}
+
+/* RESPONSIVE PARA CELULAR */
+@media (max-width: 900px) {
+    .conocenos {
+        flex-direction: column;
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .conocenos-texto,
+    .video {
+        width: 100%;
+    }
+
+    .titulo-conocenos {
+        font-size: 36px;
+    }
+
+    .texto-conocenos {
+        font-size: 18px;
+    }
+}
+
 /*Carrusel*/
 .carrusel {
   padding: 40px 0;
