@@ -77,11 +77,11 @@ body {
 }
 /*Conocenos*/
 video{
-    width: 45%;
+    width: 55%;
 }
 video iframe{
     width: 100%;
-    height: 315px;
+    height: 480px;
     border-radius: 15px;
 }
 .conocenos-texto{
@@ -90,7 +90,7 @@ video iframe{
 .conocenos {
   display: flex;
     justify-content: space-between;
-    align-items: flex-start;   /* ⬅️ CLAVE */
+    align-items: center;   /* ⬅️ CLAVE */
     padding: 80px 100px;
     gap: 50px;
     background-color: #ffffff;
@@ -98,14 +98,14 @@ video iframe{
 .titulo-conocenos {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 /* Roboto SemiBold */
 .texto-conocenos {
    font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
