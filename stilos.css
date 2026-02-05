@@ -75,26 +75,53 @@ body {
     line-height: 1.6;
     margin-bottom: 30px;
 }
-/*Conocenos*/
+/* TEXTO */
+.conocenos-texto {
+    width: 40%;
+}
+
+.titulo-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.texto-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* VIDEO */
+.video {
+    width: 55%;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    border: none;
+}
+
+/* RESPONSIVE PARA CELULAR */
 @media (max-width: 900px) {
     .conocenos {
         flex-direction: column;
-        padding: 50px 25px;
-        text-align: left;   /* evita que el texto se vea raro */
-        gap: 30px;
+        padding: 60px 30px;
+        text-align: center;
     }
 
-    .conocenos-texto {
-        width: 100%;        /* ocupa todo el ancho */
-        max-width: 600px;   /* evita que se vea gigante en tablets */
-    }
-
+    .conocenos-texto,
     .video {
         width: 100%;
     }
 
     .titulo-conocenos {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .texto-conocenos {
