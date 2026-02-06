@@ -2,28 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <!-- IMPORTANTE para diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Muñelocos</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
+
+    <!-- Fuente Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
+
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="stilos.css">
+</head> 
 <body>
 
-<!-- Header con imagen de fondo -->
 <header class="header">
-    <div class="header-texto">
-        <h1>Bienvenid@s</h1>
-        <p>
-            Somos una empresa mexicana fabricante de peluches,
-            con más de 30 años de experiencia en el mercado.
-        </p>
+    <div class="IMAGENES">
+        <img src="IMAGENES/LOGO.png" alt="Logo" class="logo">
     </div>
+
+    <nav class="menu">
+        <a class="activo" href="#inicio">Inicio</a>
+        <a href="#conocenos">Conócenos</a>
+        <a href="#colecciones">Colecciones</a>
+        <a href="#marcas">Nuestras marcas</a>
+    </nav>
 </header>
 
-<!-- Sección información -->
-<section class="info">
-    <div class="texto">
-        <h2>¿Quiénes somos?</h2>
+<!-- INICIO -->
+<section id="inicio" class="banner">
+    <h1 class="titulo-principal">Bienvenid@s</h1>
+    <p class="texto-banner">
+        Somos una empresa mexicana <br>
+        fabricante de peluches, con más<br>
+        de 30 años de experiencia<br> en el mercado.
+    </p>
+</section>
+
+<!-- CONOCENOS -->
+<section id="conocenos" class="conocenos">
+    <div class="conocenos-texto">
+        <h2 class="titulo-conocenos">¿Quiénes somos?</h2>
         <p class="texto-conocenos">
-            Somos Alvaco Enterprises S.A. de C.V.,una empresa 100% mexicana fundada en 1990,
+            Somos Alvaco Enterprises S.A. de C.V., una empresa 100% mexicana fundada en 1990,
             dedicada a transformar espacios en experiencias de entretenimiento que inspiran,
             conectan y generan valor.
         </p>
@@ -44,11 +65,11 @@
             <strong>Valores:</strong> Diversión · Calidad · Compromiso · Innovación · Familia
         </p>
     </div>
+
     <div class="video">
         <iframe 
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Video empresa"
-            frameborder="0"
+            src="https://www.youtube.com/embed/B6x-hrI_LZk?autoplay=1&mute=1"
+            allow="autoplay; encrypted-media"
             allowfullscreen>
         </iframe>
     </div>

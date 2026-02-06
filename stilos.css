@@ -1,49 +1,130 @@
-/* Reset básico */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
+    font-weight: 500;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+   ========================= */
 .header {
-    background: url("IMAGENES/BIENVENIDOS.png") no-repeat right center;
-    background-size: cover;
-    min-height: 350px;
     display: flex;
     align-items: center;
-    padding: 40px;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 40px;
+    border-bottom: 2px solid #eee;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.IMAGENES img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1e40af;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 50px;
+}
+
+.menu a:hover {
+    background: #ffffff;
+}
+
+.menu a.activo {
+    background: #d0e2f8;
+}
+
+.menu a.activo:hover {
+    background: #93c5fd;
+}
+
+/* =========================
+   BANNER BIENVENIDOS
+   ========================= */
+.banner {
+    min-height: 700px;
+    background-image: url("IMAGENES/BIENVENIDOS.png");
+    background-size: cover;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 8%;
     color: white;
 }
 
-.header-texto {
+/* TITULO */
+.titulo-principal {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 20px;
     max-width: 500px;
 }
 
-.header h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
+/* TEXTO */
+.texto-banner {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
 }
 
-/* SECCIÓN INFO */
-.info {
+/* =========================
+   CONOCENOS
+   ========================= */
+.conocenos {
     display: flex;
-    gap: 40px;
-    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    gap: 60px;
+    background-color: #ffffff;
     flex-wrap: wrap;
-    background: #f4f4f4;
 }
 
-.texto {
+/* TEXTO */
+.conocenos-texto {
     flex: 1;
     min-width: 300px;
 }
 
-.texto h2 {
-    margin-bottom: 15px;
+.titulo-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
+.texto-conocenos {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* VIDEO */
 .video {
     flex: 1;
     min-width: 300px;
@@ -51,24 +132,58 @@
 
 .video iframe {
     width: 100%;
-    height: 350px;
-    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    border: none;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 900px) {
-    .info {
-        flex-direction: column;
-        text-align: center;
-    }
 
+    /* HEADER */
     .header {
-        text-align: center;
-        justify-content: center;
-        background-position: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .video iframe {
-        height: 250px;
+    .menu {
+        justify-content: center;
+    }
+
+    /* BANNER */
+    .banner {
+        text-align: center;
+        background-position: center;
+        padding: 60px 20px;
+    }
+
+    .titulo-principal {
+        font-size: 36px;
+        margin: auto;
+    }
+
+    .texto-banner {
+        font-size: 22px;
+        margin: auto;
+    }
+
+    /* CONOCENOS */
+    .conocenos {
+        flex-direction: column;
+        padding: 50px 25px;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .titulo-conocenos {
+        font-size: 32px;
+    }
+
+    .texto-conocenos {
+        font-size: 17px;
+        line-height: 1.7;
     }
 }
