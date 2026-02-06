@@ -1,149 +1,74 @@
-body {
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    font-weight: 500;
 }
-/* Encabezaso*/
+
+/* HEADER */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    padding: 15px 40px;
-    border-bottom: 2px solid #eee;
-}
-
-.logo {
-    font-size: 10px;
-    font-weight: bold;
-    cursor: pointer;
-}
-.IMAGENES img {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
-}
-
-/*MENU*/
-.menu {
-    display: flex;
-    gap: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1e40af;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 50px;
-}
-.menu a:hover {
-    background: #ffffff;
-}
-
-.menu a.activo {
-    background: #d0e2f8;
-}
-
-.menu a.activo:hover {
-    background: #93c5fd;
-}
-/*BIENVENIDOS*/
-.banner {
-    height: 700px; 
-    background-image: url("IMAGENES/BIENVENIDOS.png"); 
+    background: url("IMAGENES/oso.png") no-repeat right center;
     background-size: cover;
-    background-position: center;
+    min-height: 350px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px; 
-    color: rgb(255, 255, 255);
-}
-/* Roboto Black */
-.titulo-principal {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-/* Roboto SemiBold */
-.texto-banner {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-/* CONTENEDOR PRINCIPAL */
-.conocenos {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 80px 100px;
-    gap: 60px;
-    background-color: #ffffff;
+    padding: 40px;
+    color: white;
 }
 
-/* TEXTO */
-.conocenos-texto {
-    width: 40%;
+.header-texto {
+    max-width: 500px;
 }
 
-.titulo-conocenos {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 48px;
-    margin-bottom: 20px;
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
-.texto-conocenos {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+/* SECCIÓN INFO */
+.info {
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+    flex-wrap: wrap;
+    background: #f4f4f4;
 }
 
-/* VIDEO */
+.texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto h2 {
+    margin-bottom: 15px;
+}
+
 .video {
-    width: 55%;
+    flex: 1;
+    min-width: 300px;
 }
 
 .video iframe {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 18px;
-    border: none;
+    height: 350px;
+    border-radius: 10px;
 }
 
-/* =========================
-   RESPONSIVE PARA CELULAR
-   ========================= */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-
-    .conocenos {
-        flex-direction: column;   /* texto arriba, video abajo */
-        padding: 50px 25px;
-        text-align: left;
-        gap: 30px;
+    .info {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .conocenos-texto {
-        width: 100%;              /* ocupa todo el ancho */
+    .header {
+        text-align: center;
+        justify-content: center;
+        background-position: center;
     }
 
-    .video {
-        width: 100%;              /* video ancho completo */
-    }
-
-    .titulo-conocenos {
-        font-size: 32px;
-    }
-
-    .texto-conocenos {
-        font-size: 17px;
-        line-height: 1.7;
+    .video iframe {
+        height: 250px;
     }
 }
-
