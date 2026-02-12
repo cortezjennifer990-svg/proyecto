@@ -1,165 +1,168 @@
+/* ===== Base ===== */
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
 }
+img { max-width: 100%; height: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 
-/* Encabezado */
+/* ===== Header ===== */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    padding: 15px 40px;
-    border-bottom: 2px solid #eee;
+  position: sticky; top: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff;
+  padding: 12px 16px;
+  border-bottom: 2px solid #eee;
+  gap: 12px;
+  flex-wrap: nowrap;
 }
 
-.IMAGENES img {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
+.IMAGENES img { height: 56px; width: auto; object-fit: contain; }
+
+/* botón hamburguesa (oculto en desktop) */
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  font-size: 1.25rem;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  padding: .4rem .6rem;
+  cursor: pointer;
 }
 
-/* MENÚ */
+/* Menú */
 .menu {
-    display: flex;
-    gap: 10px;
+  display: flex; gap: 10px;
+  align-items: center;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #1e40af;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 50px;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 50px;
 }
 
-.menu a:hover {
-    background: #ffffff;
-}
+.menu a:hover { background: #f5f8ff; }
+.menu a.activo { background: #d0e2f8; }
+.menu a.activo:hover { background: #93c5fd; }
 
-.menu a.activo {
-    background: #d0e2f8;
-}
-
-/* BANNER */
+/* ===== Banner ===== */
 .banner {
-    min-height: 700px;
-    background-image: url("IMAGENES/BIENVENIDOS.png");
-    background-size: cover;
-    background-position: center right;
-    display: flex;
-    align-items: center;
-    padding: 0 100px;
-    color: white;
+  position: relative;
+  min-height: 68vh;
+  display: grid;
+  align-items: center;
+  padding: 60px 8%;
+  color: white;
+
+  /* Fondo con capa de color para mejor contraste */
+  background-image:
+    linear-gradient(180deg, rgba(0,30,60,.55), rgba(0,30,60,.35)),
+    url("IMAGENES/BIENVENIDOS.png");
+  background-size: cover;
+  background-position: center; /* centrado mejora móvil */
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-/* CONTENEDOR DEL TEXTO */
-.contenido-banner {
-    max-width: 500px; /* evita que invada el oso */
-}
-
-/* TÍTULO */
 .titulo-principal {
-    font-weight: 900;
-    font-size: 48px;
-    margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 48px); /* FIX */
+  line-height: 1.12;
+  margin: 0 0 12px;
 }
 
-/* TEXTO */
 .texto-banner {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 2.5vw, 30px); /* FIX */
+  line-height: 1.6;
+  margin: 0;
+  max-width: 60ch;
 }
 
-/* SECCIÓN CONÓCENOS */
+/* ===== Conócenos ===== */
 .conocenos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 100px;
-    gap: 60px;
-    background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 8%;
+  gap: 60px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
 }
 
-.conocenos-texto {
-    width: 40%;
-}
+.conocenos-texto { flex: 1; min-width: 300px; }
 
 .titulo-conocenos {
-    font-weight: 900;
-    font-size: 48px;
-    margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 4vw, 48px);
+  margin: 0 0 12px;
 }
 
 .texto-conocenos {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.65;
+  margin: 0 0 18px;
 }
 
-.video {
-    width: 55%;
-}
-
+.video { flex: 1; min-width: 300px; }
 .video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 18px;
-    border: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  border: none;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
+  /* Header: activar hamburguesa y colapsar menú */
+  .nav-toggle { display: inline-flex; }
+  .menu {
+    position: absolute;
+    top: calc(56px + 24px); /* aprox. alto del header */
+    left: 0; right: 0;
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 8px 16px 16px;
+    border-bottom: 1px solid #eee;
+    gap: 6px;
+  }
+  .menu.open { display: flex; } /* se abre con JS */
+  .menu a { padding: 10px 12px; }
 
-    .header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+  .header { position: sticky; top: 0; }
 
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  /* Banner */
+  .banner {
+    text-align: left;             /* mejor legibilidad */
+    background-position: center;  /* evita corte del oso */
+    padding: 48px 20px;
+    min-height: 60vh;
+  }
+  .texto-banner { max-width: 36rem; }
 
-    .banner {
-        min-height: 500px;
-        padding: 40px 25px;
-        background-position: center;
-    }
+  /* Conócenos */
+  .conocenos {
+    flex-direction: column;
+    padding: 48px 20px;
+    gap: 28px;
+  }
+}
 
-    .contenido-banner {
-        max-width: 100%;
-    }
-
-    .titulo-principal {
-        font-size: 34px;
-    }
-
-    .texto-banner {
-        font-size: 20px;
-    }
-
-    .conocenos {
-        flex-direction: column;
-        padding: 50px 25px;
-        gap: 30px;
-    }
-
-    .conocenos-texto,
-    .video {
-        width: 100%;
-    }
-
-    .titulo-conocenos {
-        font-size: 32px;
-    }
-
-    .texto-conocenos {
-        font-size: 17px;
-    }
+/* Extra pequeño (≤ 480px) */
+@media (max-width: 480px){
+  .IMAGENES img { height: 48px; }
+  .banner { padding: 36px 16px; }
 }
